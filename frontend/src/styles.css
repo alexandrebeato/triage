@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: #f4f5f7;
+  color: #1f2933;
+}
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+select {
+  padding: 6px 8px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.type {
+  flex: 1;
+  font-size: 1.05rem;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 12px 0 0;
+}
+
+.details dt {
+  font-size: 0.75rem;
+  color: #616e7c;
+  text-transform: uppercase;
+}
+
+.details dd {
+  margin: 2px 0 0;
+}
+
+.badge {
+  padding: 2px 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.severity-1 { background: #eef2f6; color: #475569; }
+.severity-2 { background: #e0f2fe; color: #075985; }
+.severity-3 { background: #fef3c7; color: #92400e; }
+.severity-4 { background: #ffedd5; color: #9a3412; }
+.severity-5 { background: #fee2e2; color: #991b1b; }
+
+.status-open { border-color: #2563eb; color: #1d4ed8; }
+.status-acknowledged { border-color: #d97706; color: #b45309; }
+.status-resolved { border-color: #16a34a; color: #15803d; }
+
+.note {
+  margin: 12px 0 0;
+  color: #3e4c59;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+button {
+  padding: 6px 14px;
+  border: 1px solid #1d4ed8;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.secondary {
+  border-color: #cbd2d9;
+  background: #fff;
+  color: #1f2933;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.resolve-form {
+  margin-top: 12px;
+}
+
+.resolve-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.resolve-form .actions {
+  margin-top: 8px;
+}
+
+.message {
+  color: #616e7c;
+}
+
+.message.error {
+  color: #b91c1c;
+}
+
+.card .message {
+  margin: 8px 0 0;
+}
