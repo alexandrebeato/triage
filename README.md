@@ -112,12 +112,6 @@ Usei duas ferramentas, com papéis diferentes:
 
 As decisões técnicas ficaram comigo. Eu definia e aprovava o escopo de cada etapa antes da implementação, e arquitetura, bibliotecas, regras de negócio e premissas passavam pela minha avaliação. O Claude Code recebia tarefas delimitadas e não avançava para a etapa seguinte sem a minha revisão; as sugestões das duas ferramentas eram tratadas como sugestões, não como decisões. Revisei os resultados, pedi correções quando algo não estava adequado e mantive a implementação propositalmente simples, sem abstrações que o desafio não pedia.
 
-Um prompt representativo do processo:
-
-> Implemente somente o backend do desafio, mantendo a solução simples e proporcional. Não crie repository pattern, use cases ou abstrações sem necessidade. Depois valide os endpoints contra um Mongo real e me mostre os resultados antes de avançar.
-
-Um exemplo de algo corrigido na revisão: a primeira versão validava `detectedAt` apenas com `new Date(...)`, e com isso o JavaScript aceitava entradas como `"1"` e `"March 7"` como datas válidas. O comportamento foi identificado durante a auditoria da implementação, e aprovei a correção para exigir também o formato ISO antes de considerar a data válida.
-
 ## Premissas
 
 - Ao agrupar uma repetição, `detectedAt` passa a representar a última detecção; com isso, a janela de 10 minutos conta a partir da última repetição.
